@@ -2,14 +2,14 @@ import pygame
 import sys
 import game
 
-width, height = 64, 64
+width, height = 128, 128
 window = pygame.display.set_mode((width, height), pygame.SCALED)
 clock = pygame.time.Clock()
 
 def on_start_button_click():
     game.start()
 
-main_menu = pygame.image.load("assets/textures/main menu.png")
+main_menu = pygame.transform.scale_by(pygame.image.load("assets/textures/main menu.png"), 2)
 start_button = pygame.Rect(0, 0, width, height)
 # button is the size of the screen for now
 
